@@ -7,25 +7,27 @@ namespace SharpEngine
 {
     class Program
     {
-        struct Vector
-        {
+        struct Vector {
             public float x, y, z;
 
-            public Vector(float x, float y, float z)
-            {
+            public Vector(float x, float y, float z) {
                 this.x = x;
                 this.y = y;
                 this.z = z;
             }
 
-            public Vector(float x, float y)
-            {
+            public Vector(float x, float y) {
                 this.x = x;
                 this.y = y;
                 this.z = 0;
             }
-        }
 
+            public static Vector operator *(Vector v, float f) {
+                return new Vector(v.x * f, v.y * f, v.z * f);
+            }
+        
+            
+        }
         static Vector[] vertices = new float[]
         {
             new Vector(-.1f,-.1f)
