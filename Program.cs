@@ -8,10 +8,16 @@ namespace SharpEngine
     {
         static float[] vertices = new float[]
         {
-            -.5f, -.5f, 0f,
-            .5f,-.5f,0f,
-            0f,.5f,0f
+            -.1f, -.1f, 0f,
+            .1f,-.1f,0f,
+            0f,.5f,0f, 
+                   
+              
         };
+
+        
+
+        
         static void Main(string[] args)
         {
             var window = CreatWindow();
@@ -29,7 +35,7 @@ namespace SharpEngine
                 glDrawArrays(GL_TRIANGLES,0,3);
                 Glfw.SwapBuffers(window);
                 glFlush();
-                vertices[3]+=0.001f;
+                
             }
         }
 
